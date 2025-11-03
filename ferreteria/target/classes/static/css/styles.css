@@ -1,0 +1,102 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* Fondo general */
+body {
+  background-color: #433E3F;
+  color: #fff; /* si usas fondo oscuro */
+}
+
+/* Textos y títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+/* ===== NAVVBAR ===== */
+
+.navbar {
+  background-color: #C69C72 !important;
+}
+
+/* Subnavbar */
+.subnavbar,
+.nav-categorias {
+  background-color: #C0B7B1 !important;
+}
+
+/* Dropdowns */
+.dropdown-menu {
+  background-color: #C0B7B1;
+  border: none;
+}
+
+/* Iconos del navbar */
+.navbar i {
+  color: #000;
+}
+
+/* ===== Seccion en carrito ===== */
+#carrito-hero {
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  background-color: #c0b7b1;
+}
+
+#carrito-hero h1,
+#carrito-hero p {
+  color: #000;
+}
+
+#carrito-hero .btn {
+  background-color: #433e3f;
+  border: none;
+}
+
+#carrito-hero .btn:hover {
+  background-color: #2f2b2c;
+}
+
+/* ===== Botón específico del carrito ===== */
+#btnCarrito {
+  background-color: #C69C72;    
+  color: #000000;                
+  border: 1px solid #433E3F;     
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Ícono del carrito */
+#btnCarrito i {
+  color: #000000;
+}
+
+/* Hover */
+#btnCarrito:hover {
+  background-color: #433E3F;     
+  color: #FFFFFF;
+  border-color: #433E3F;
+}
+#btnCarrito:hover i {
+  color: #FFFFFF;
+}
+
+/* ===== Tabla del carrito ===== */
+
+#tablaCustom {
+  background-color: #dfdfdf;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#tablaCustom th {
+  background-color: #bdb7b1;
+  color: #000;
+}
+
+#tablaCustom td {
+  background-color: #f2f2f2;
+  border-color: #bcbcbc;
+}
+
+

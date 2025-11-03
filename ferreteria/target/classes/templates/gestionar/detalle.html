@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{general/fragmentosAdmin :: head}"></head>
+    <body>
+        <header th:replace="~{general/fragmentosAdmin :: header}"></header>
+
+        <main class="container my-5">
+            <a th:href="@{/gestionar/listadoProductos}" class="btn btn-outline-secondary mb-4">
+                ← Volver al listado
+            </a>
+
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <div class="card shadow-sm">
+                        <img th:src="${producto.rutaImagen} ?: @{/img/placeholder.png}"
+                             class="card-img-top" alt="Imagen del producto">
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="card shadow-sm" style="background-color: #f2f2f2;">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3 text-dark" th:text="${producto.nombre}">Nombre producto</h2>
+
+                            <p class="mb-1"><strong>Descripción:</strong>
+                                <span th:text="${producto.descripcion}">Descripción</span>
+                            </p>
+
+                            <p class="mb-1"><strong>Precio:</strong>
+                                ₡<span th:text="${#numbers.formatDecimal(producto.precio, 1, 'COMMA', 2, 'POINT')}">0.00</span>
+                            </p>
+
+                            <p class="mb-3"><strong>Existencias:</strong>
+                                <span th:text="${producto.existencias}">0</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer th:replace="~{general/fragmentosAdmin :: footer}"></footer>
+    </body>
+</html>

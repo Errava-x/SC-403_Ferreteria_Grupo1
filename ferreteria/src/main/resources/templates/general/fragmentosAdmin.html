@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:fragment="head">
+        <meta charset="UTF-8"/>
+        <title>Ferretería</title>
+        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/webjars/font-awesome/css/all.min.css}" rel="stylesheet"/>
+        <link rel="stylesheet" th:href="@{/css/styles.css}" />
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header th:fragment="header" class="mb-4">
+
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container">
+
+                    <!-- Titulo -->
+                    <a class="navbar-brand fw-bold d-flex align-items-center" th:href="@{/}">
+                        <i class="fa-solid fa-screwdriver-wrench me-2"></i> FERRETERIA
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="topNav">
+
+                        <!-- Buscador -->
+                        <form class="d-flex mx-auto" role="search" style="max-width: 520px;">
+                            <input class="form-control me-2" type="search" placeholder="Barra de búsqueda..." aria-label="Buscar">
+                                <button class="btn btn-outline-secondary" type="button">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                        </form>
+
+                        <!-- Menú derecho -->
+                        <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                         
+                            
+                            <li class="nav-item dropdown me-2">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Gestionar</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" th:href="@{/gestionar/listadoProductos}">Productos</a></li>
+                                </ul>
+                            </li>
+                            
+
+                            
+
+                            <!-- Carrito -->
+                            <li class="nav-item">
+                                <a id="btnCarrito" class="btn position-relative" th:href="@{/carrito/listado}">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span class="ms-1">Carrito</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <!-- FOOTER -->
+        <footer th:fragment="footer" class="py-3 mt-5 bg-dark text-white-50">
+            <div class="container text-center">
+                <small>Ferretería · Derechos Reservados 2025</small>
+            </div>
+        </footer>
+
+        <!-- Toasts reutilizables (si los quieres luego) -->
+        <section th:fragment="mostrarToast">
+            <!-- igual al patrón de tus proyectos previos -->
+        </section>
+    </body>
+</html>
