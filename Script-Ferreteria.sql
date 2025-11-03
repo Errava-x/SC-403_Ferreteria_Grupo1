@@ -3,7 +3,8 @@ USE ferreteria;
 
 CREATE TABLE categoria(
 	id_categoria INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100)
+    nombre VARCHAR(100) NOT NULL,
+    estado boolean NOT NULL
 );
 
 CREATE TABLE producto (
@@ -21,8 +22,8 @@ CREATE TABLE producto (
 CREATE USER 'usuario_prueba'@'localhost' IDENTIFIED BY 'Usuar1o_Clave.';
 GRANT ALL PRIVILEGES ON ferreteria.* TO 'usuario_prueba'@'localhost';
 
-INSERT INTO categoria (nombre) VALUES
-('Herramientas');
+INSERT INTO categoria (nombre, estado) VALUES
+('Herramientas', 1);
 
 COMMIT;
 
